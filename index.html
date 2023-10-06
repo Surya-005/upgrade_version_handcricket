@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./resheight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Salsa&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="landing_page">
+        <div class="form_handcricket">
+            <p class="hand"><span class="ha">ha</span>nd</p>
+            <p class="cricket">cri<span class="cket">cket</span></p>
+            <img class="ball b1" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b2" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b3" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b4" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b5" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b6" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b7" src="./gameImages/ball.png" alt="ball">
+            <img class="ball b8" src="./gameImages/ball.png" alt="ball">
+        </div>
+        <div class="about">
+            <ol>
+                <li>how to play?</li>
+                <li class="r1">1.Hand cricket is a game in which two play compete against each other using their
+                    fingers. </li>
+                <li class="r2">2.In each turn, both players display a number using their fingers at the same time.
+                </li>
+                <li class="r3">3.If the scores match, the batsman is out, otherwise they gain their number as runs.
+                </li>
+                <li class="r4">4.Finally, the player who scores the most wins the game.</li>
+                <button onclick="{closebutton('about ol')}">close</button>
+            </ol>
+
+            <form onsubmit="{(e)=>{e.preventDefault()}}">
+                <input id='player_name' type="text" autofocus required placeholder="---NAME---">
+                <button onclick="gototoss(event)">Lets Play</button>
+                <h1 onclick="{aboutopen()}">how to play?</h1>
+            </form>
+        </div>
+    </div>
+    <div class="popup">
+        <img src="./gameImages/cricpose.png" alt="cricket">
+        <div class="popup_message">  
+            <h1 class="popup_greetings">hello <span class="playername"></span></h1>
+            <h1 class="tossdetails"></h1>
+            <h1 id="first_half_result"></h1>
+            <h1 id="first_half_score"></h1>
+            <h1 class="human_what_to_do">this is toss section you need to choose "odd" or "even".</br>
+                odd means one syllables. Even means two syllables.</br>then you choose one number. the addition of your number and computer number
+                decides who won the toss.
+            </h1> 
+        </div>
+        <div class="popup_buttons">
+            <button class="closebutton"   onclick="closebutton('popup')">lets go</button>
+            <button class="match_summary_button" onclick="matchSummary()">match summary</button>
+            <button class="home_button" onclick="home()">home</button>
+        </div>
+    </div>
+    <div class="entiretoss">
+        <div class="player_profile">
+            <div class="player1 player">
+                <img class="player1img pimg" src="./gameImages/human.png" alt="human">
+                <p class="playername">PLAYER 1</p>
+            </div>
+            <h1 class="heading">TOSS</h1>
+            <div class="player2 player">
+                <p class="computername">COMPUTER</p>
+                <img class="player2img cimg" src="./gameImages/computer.png" alt="computer">
+            </div>
+        </div>
+        <div class="score_area">
+            <div class="human_score score">
+                <img id="hv" src="./gameImages/fingers/zero.png">
+                <p><span class="playername">PLAYER 1</span><span class="hum_decision">(decision)</span></p>
+            </div>
+            <div class="computer_score score">
+                <img id="cv" src="./gameImages/fingers/zero.png">
+                <p class="computername"><span>COMPUTER</span><span class="com_decision">(decision)</span></p>
+            </div>
+        </div>
+        <div class="result">
+            <h2>scoreBoard</h2>
+            <div class="main_scoreboard">
+                <h1 id="ooe">0</h1>
+                <h1 id="toss_result"></h1>
+                <h1 class="computer_tosswon"></h1>
+            </div>
+        </div>
+        <div id="toss">
+            <h1>choose the option</h1>
+            <div class="toss_decition">
+                <div>
+                    <button onclick="{humanvalue('odd')}">Odd</button>
+                    <button onclick="{humanvalue('even')}">Even</button>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="toss(event)">0</button>
+                <button onclick="toss(event)">1</button>
+                <button onclick="toss(event)">2</button>
+                <button onclick="toss(event)">3</button>
+                <button onclick="toss(event)">4</button>
+                <button onclick="toss(event)">5</button>
+                <button onclick="toss(event)">6</button>
+            </div>
+            <div id="tosswon">
+                <button id="batting" onclick="batting(playername,'bat first')">BATTING</button>
+                <button id="bowling" onclick="bowling(playername,'bowl first')">BOWLING</button>
+            </div>
+        </div>
+    </div>
+    <div id="first_half">
+        <div class="playerprofile">
+            <div class="player1 player">
+                <img class="player1img pimg" src="./gameImages/human.png" alt="human">
+                <p class="playername_">PLAYER 1</p>
+            </div>
+            <h1 class="heading">FIRST HALF</h1>
+            <div class="player2 player">
+                <p class="computername">COMPUTER</p>
+                <img class="player2img cimg" src="./gameImages/computer.png" alt="computer">
+            </div>
+        </div>
+        <div class="score_area">
+            <div class="human_score score">
+                <img id="humanScore" src="./gameImages/fingers/zero.png">
+                <p><span class="playername">PLAYER 1</span><span class="hum_decision">(decision)</span></p>
+            </div>
+            <div class="main_score score">
+                <h1 id="batsman_score">0</h1>
+            </div>
+            <div class="computer_score score">
+                <img id="computerbowl" src="./gameImages/fingers/zero.png">
+                <p class="computername"><span>COMPUTER</span><span class="com_decision">(decision)</span></p>
+            </div>
+        </div>
+        <div class="result">
+            <h2>scoreBoard</h2>
+            <div class="main_scoreboard">
+                <h2 class="who_plays_batting_in_firsthalf"></h2>
+                <p id="scoreBoard"></p>
+                <div id="runsneed"></div>
+            </div>
+        </div>
+        <div class="field">
+            <div id="gamebutton">
+                <button onclick="score(event)">0</button>
+                <button onclick="score(event)">1</button>
+                <button onclick="score(event)">2</button>
+                <button onclick="score(event)">3</button>
+                <button onclick="score(event)">4</button>
+                <button onclick="score(event)">5</button>
+                <button onclick="score(event)">6</button>
+            </div>
+        </div>
+    </div>
+    <div id="second_half">
+        <div class="playerprofile">
+            <div class="player1 player">
+                <img class="player2img cimg" src="./gameImages/computer.png" alt="computer">
+                <p class="computername">COMPUTER</p>
+            </div>
+            <h1 class="heading">SECOND HALF</h1>
+            <div class="player2 player">
+                <p class="player_name">PLAYER 1</p>
+                <img class="player1img pimg" src="./gameImages/human.png" alt="human">
+            </div>
+        </div>
+        <div class="score_area">
+            <div class="computer_score score">
+                <img id="computerScore" src="./gameImages/fingers/zero.png">
+                <p class="computername"><span>COMPUTER</span><span class="com_decision">(decision)</span></p>
+            </div>
+            <div class="main_score score">
+                <h1 id="batsman_score"></h1>
+            </div>
+            <div class="human_score score">
+                <img id="humanbowl" src="./gameImages/fingers/zero.png">
+                <p><span class="playername">PLAYER 1</span><span class="hum_decision">(decision)</span></p>
+            </div>
+        </div>
+        <div class="result">
+            <h2>scoreBoard</h2>
+            <div class="main_scoreboard">
+                <h2 class="who_plays_batting_in_secondhalf"></h2>
+                <p id="secondscoreBoard"></p>
+                <div id="second_half_result"></div>
+                <div id="need"></div>
+            </div>
+        </div>
+        <div class="field">
+             <!-- <div class="computer"></div> -->
+            <div class="human">
+                <div id="bowlbutton">
+                    <button onclick="ball(event)">0</button>
+                    <button onclick="ball(event)">1</button>
+                    <button onclick="ball(event)">2</button>
+                    <button onclick="ball(event)">3</button>
+                    <button onclick="ball(event)">4</button>
+                    <button onclick="ball(event)">5</button>
+                    <button onclick="ball(event)">6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--match summary -->
+    <div class="match_summary">
+        <h1 class="heading">MATCH SUMMARY</h1>
+        <ol>
+            <li id="toss_summary">toss won by surya</li>
+            <li id="tossDecition_summary">toss won by surya</li>
+            <li id="first_half_summary">surya scored 90runs</li>
+            <li id="first_half_opponentneed_summary">surya scored 90runs</li>
+            <li id="second_half_summary"> surya win the match</li>
+            <li id="result_summary"> surya win the match</li>
+        </ol>
+        <button class="home_button" onclick="home()">home</button>
+    </div>
+    <h1 class="not_available">potrait only & height must be 500px</br>sorry!!!</h1>
+    <script src="./home.js"></script>
+</body>
+
+</html>

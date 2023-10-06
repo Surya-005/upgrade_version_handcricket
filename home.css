@@ -1,0 +1,429 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+body {
+    background: url('./gameImages/2870174_6362.jpg') center/cover no-repeat;
+}
+a {
+    text-decoration: none;
+}
+/* landing page */
+.landing_page {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    background: rgb(42, 41, 41);
+    position: relative;
+}
+.form_handcricket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gold;
+    border-radius: 0 50% 50% 0;
+    padding: 1em;
+    box-shadow: 0 0 8px 1px black;
+    border: 2px solid black;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+.hand,.cricket {
+    font-size: 8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+    z-index: 1;
+}
+.cricket {
+    font-size: 7em;
+}
+.ha,.cket {
+    color: red;
+    text-decoration: underline;
+}
+.ball {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 0;
+    animation: ball 3s ease-in-out infinite alternate;
+}
+.b1 {top: 10%;left: 10%;}
+.b2 {top: 20%;left: 80%;}
+.b3 {top: 40%;left: 80%;}
+.b4 {top: 80%;left: 30%;}
+.b5 {top: 5%;left: 50%;}
+.b6 {top: 90%;left: 40%;}
+.b7 {top: 70%;left: 70%;}
+.b8 {top: 50%;left: 10%;}
+@keyframes ball {
+    50% {height: 45px;width: 45px;}
+    100% {transform: rotate(360deg);}
+}
+.about form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about form input {
+    outline: none;
+    background-color: transparent;
+    padding: 0.4em;
+    font-size: 1.2em;
+    border: none;
+    border-bottom: 3px solid gold;
+    color: gold;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+.about ol button {
+    display: none;
+}
+.about form :last-child {
+    display: none;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 0em;
+    width: 50%;
+}
+.about ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about ol li {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: capitalize;
+    list-style-type: none;
+    text-align: left;
+    margin: 0.5em;
+}
+.about ol li:first-child {
+    font-size: 1.5em;
+    color: red;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.about button {
+    align-self: center;
+}
+/* toss */
+.entiretoss,
+#first_half,
+#second_half {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.507);
+}
+
+.player_profile,
+.playerprofile {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    padding: 0em 0.3em;
+}
+.player_profile .playername,.playerprofile .playername,.playerprofile .playername_,.player_profile .computername ,.playerprofile .computername,.playerprofile .player_name{
+    color: gold;
+}
+.player {
+    display: flex;
+    align-items: center;
+}
+.player2{
+    justify-content: end;
+}
+
+.pimg,
+.cimg {
+    height: 80%;
+    filter: drop-shadow(2px 2px 0px black);
+}
+.score p span:first-child,.player_profile p,
+.playerprofile p{
+    font-size: 1.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color:antiquewhite;
+}
+
+.heading {
+    font-size: 2em;
+    text-shadow: 1px 1px rgb(6, 6, 6);
+    color:whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    align-self: center;
+}
+
+/* score area */
+.score_area {
+    align-self:center;
+    height:30%;
+    width:70%;
+    display:flex;
+    justify-content: space-around;
+    background:linear-gradient(to right,rgb(230, 69, 69),rgb(221, 125, 125),rgb(228, 69, 69));
+    border-radius: 1em;
+}
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* humanvalue-toss */
+#hv,
+/* computervalue-toss */
+#cv,
+#humanScore,
+#humanbowl,
+#computerScore,
+#computerbowl {
+    height: 80%;
+    filter: drop-shadow(5px 0px 0px black);
+}
+
+.hum_decision,.com_decision{
+    color: rgb(5, 252, 5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size:20px;
+    font-weight: 300;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 40%;
+    border-radius: 1em;
+    align-self: center;
+    background:linear-gradient(to right,rgba(14, 13, 13, 0.452),rgba(59, 59, 59, 0.507),rgba(8, 8, 8, 0.404));
+}
+.main_scoreboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    margin: auto 0em;
+}
+.result>h2,#toss h1 {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+}
+.who_plays_batting_in_firsthalf,
+.who_plays_batting_in_secondhalf {
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+.result #toss_result,.result .computer_tosswon,
+#runsneed,
+#second_half_result,
+#need {
+    font-size: 1.5em;
+    color: azure;
+    text-transform:capitalize;
+    font-weight: 400;
+    }
+
+#ooe,
+#scoreBoard,
+#secondscoreBoard {
+    font-size: 3em;
+    color: gold;
+}
+#toss,
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 1.2em;
+    height: 30%;
+}
+.toss_decition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#toss h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.popup{
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.popup_message{
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(cyan,rgb(137, 137, 211));
+    color:white;
+    padding: 1em;
+    width: 60%;
+    /* height: 50%; */
+    position: relative;
+}
+.popup img{
+    height:20%;
+}
+.popup_message h1{
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    word-spacing: 3px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.popup span{
+    color: rgb(253, 5, 5);
+}
+#batsman_score{
+    font-size: 3em;
+    color:whitesmoke;
+}
+.field {
+    flex-direction: column;
+}
+#tosswon {
+    text-align: center;
+}
+
+/* match summary */
+.match_summary_button {
+    align-self: center;
+}
+.match_summary {
+    background-color: rgba(0, 0, 0, 0.801);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.match_summary .heading {
+    font-size: 3em;
+}
+.match_summary ol {
+    background-color: rgba(0, 0, 0, 0.781);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: number;
+    padding: 3em 1em 3em 3em;
+    border: 3px solid gold;
+    border-radius: 1em;
+}
+.match_summary ol li {
+    font-size: 2em;
+    color: whitesmoke;
+    text-transform: capitalize;
+}
+/* buttons */
+button {
+    padding: 0.2em 1em;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+    background-color: gold;
+    box-shadow: 5px 5px  black;
+    border-radius: 1em;
+    transition: all 0.5s;
+    text-transform: capitalize;
+}
+button:hover {
+    box-shadow: 0px 0px black;
+    color: gold;
+background-color: black;
+}
+.toss_decition button {
+    margin-right: 0.3em;
+    font-size: 2em;
+}
+.buttons,
+#gamebutton,
+#bowlbutton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button,#gamebutton button,
+#bowlbutton button{
+    padding: 0.5em 1em;
+    margin: 0 0.2em;
+    font-size: 2em;
+    outline: none;
+    background-color: black;
+    box-shadow: none;
+    color: gold;
+    border: none;
+}
+.buttons button:hover{
+    background-color: gold;
+    color: black;
+}
+#gamebutton button,
+#bowlbutton button {
+border: none;
+border-radius: 0;
+color:rgb(255, 254, 254);
+text-shadow: 5px 5px black;
+font-weight: 900;
+font-size: 3em;
+padding: 0.5em;
+}
+.popup_buttons{
+    display: flex;
+}
+.popup_buttons button{
+    margin: 0em 0.5em;
+}
+#tosswon,.toss_decition,.buttons,.player_profile {
+    display: none;
+}
+.entiretoss,.entiretoss .result,.popup,#first_half,#second_half,.match_summary,.match_summary_button {
+    display: none;
+}
+.not_available{
+    display: none;
+}

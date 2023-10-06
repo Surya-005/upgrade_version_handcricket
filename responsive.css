@@ -1,0 +1,354 @@
+@media screen and (max-width:1300px) {
+
+    .hand,
+    .cricket {
+        font-size: 6em;
+    }
+
+    .about ol li {
+        font-size: 1.1em;
+    }
+
+    .popup_message {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .hand,
+    .cricket {
+        font-size: 5.5em;
+    }
+
+    .score_area {
+        width: 80%;
+    }
+
+    .result {
+        width: 70%;
+    }
+
+    .popup_message {
+        padding: 0.5em;
+    }
+
+    .popup_message h1 {
+        font-size: 1.35em;
+    }
+
+    #gamebutton button,
+    #bowlbutton button {
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .landing_page {
+        flex-direction: column;
+    }
+
+    .form_handcricket {
+        width: 100%;
+        height: 70%;
+        border-radius: 0 0 500px 500px;
+        border: none;
+    }
+
+    .hand,
+    .cricket {
+        font-size: 7em;
+    }
+
+    .about {
+        height: 30%;
+        width: 100%;
+    }
+
+    .about ol {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        left: 10%;
+        bottom: 30%;
+        background-color: rgba(0, 0, 0, 0.879);
+        z-index: 4;
+        border-radius: 1em;
+        border: 2px solid gold;
+        display: none;
+    }
+
+    .about ol button {
+        display: flex;
+    }
+
+    .about form :last-child {
+        display: flex;
+        color: white;
+        margin-top: 0.5em;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1.5em;
+        text-decoration: underline;
+    }
+
+    .about form input {
+        font-size: 1.7em;
+    }
+
+    .score p span {
+        font-size: 1.2em !important;
+    }
+    .popup_message h1 {
+        font-size: 1.2em;
+    }
+
+    #toss,
+    .field {
+        padding: 0.3em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .entiretoss,
+    #first_half,
+    #second_half {
+        justify-content: space-between;
+    }
+    .score_area {
+        width: 90%;
+        height: 25%;
+    }
+    .result {
+        height: 25%;
+    }
+    #gamebutton button,
+    #bowlbutton button {
+        font-size: 2em;
+        padding: 0.7em;
+    }
+    .match_summary ol li {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .player_profile,
+    .playerprofile {
+        height: 8%;
+        font-size: 0.8em;
+    }
+
+    .score p span {
+        font-size: 1em !important;
+    }
+
+    /* humanvalue-toss */
+    #hv,
+    /* computervalue-toss */
+    #cv,
+    #humanScore,
+    #humanbowl,
+    #computerScore,
+    #computerbowl {
+        height: 70%;
+    }
+
+    .popup_message {
+        width: 80%;
+    }
+    button{
+        font-size:1em ;
+    }
+    .buttons button,
+    #gamebutton button,
+    #bowlbutton button {
+        font-size: 1.2em;
+    }
+    .popup_message button {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .form_handcricket {
+        height: 65%;
+    }
+
+    .hand,
+    .cricket {
+        font-size: 5em;
+    }
+
+    .pimg,
+    .cimg {
+        height: 50%;
+    }
+    .heading {
+        font-size: 1.5em;
+    }
+    .player_profile p,
+    .playerprofile p
+   {
+        font-size: 1.2em;
+    }
+    .popup_message h1 {
+        font-size: 1em;
+    }
+
+    .score p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .score p span {
+        font-size: 1em !important;
+    }
+
+    #batsman_score {
+        font-size: 3em !important;
+    }
+
+    #ooe,
+    #scoreBoard,
+    #secondscoreBoard {
+        font-size: 2em;
+    }
+
+    .result #toss_result,
+    .result .computer_tosswon,
+    #runsneed,
+    #second_half_result,
+    #need {
+        font-size: 1.2em;
+    }
+    .match_summary ol li {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:400px) {
+.player{
+    flex-direction: column;
+}
+.player2{
+    flex-direction: column-reverse;
+    justify-content: start;
+}
+    .hand,
+    .cricket {
+        font-size: 4.5em;
+    }
+
+    .about form input {
+        font-size: 1.5em;
+    }
+button{
+    font-size:1.2em ;
+}
+    .buttons button,
+    #gamebutton button,
+    #bowlbutton button {
+        font-size: 1.5em;
+    }
+
+    .result #toss_result,
+    .result .computer_tosswon,
+    #runsneed,
+    #second_half_result,
+    #need {
+        font-size: 1em;
+    }
+    .match_summary ol li {
+        font-size: 1.1em;
+    }
+}
+
+/* responsive landscape */
+@media screen and (orientation:landscape) and (max-height:500px) {
+    body {
+        background: black;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .not_available {
+        color: gold;
+        display: flex;
+        text-align: center;
+        font-size: 1.3em;
+        text-transform: capitalize;
+    }
+
+    .landing_page {
+        display: none;
+    }
+
+    .entiretoss,
+    #first_half,
+    #second_half,
+    .match_summary,
+    .match_summary_button,
+    .popup {
+        display: none !important;
+    }
+}
+
+@media screen and (min-height:800px) and (min-width:800px) {
+    .landing_page {
+        flex-direction: column;
+    }
+
+    .form_handcricket {
+        width: 100%;
+        height: 70%;
+        border-radius: 0 0 500px 500px;
+        border: none;
+    }
+
+    .hand,
+    .cricket {
+        font-size: 7em;
+    }
+
+    .about {
+        height: 30%;
+        width: 100%;
+    }
+
+    .about ol {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        left: 10%;
+        bottom: 30%;
+        background-color: rgba(0, 0, 0, 0.879);
+        z-index: 4;
+        border-radius: 1em;
+        border: 2px solid gold;
+        display: none;
+    }
+
+    .about ol button {
+        display: flex;
+    }
+
+    .about form :last-child {
+        display: flex;
+        color: white;
+        margin-top: 0.5em;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1.5em;
+        text-decoration: underline;
+    }
+
+    .about form input {
+        font-size: 1.7em;
+    }
+
+}
